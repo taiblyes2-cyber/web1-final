@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This makes sure mobile browsers show the page at real mobile width instead of zoomed out -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Star Media</title>
+
+  <!-- Google Font: Open Sans, required by the assignment -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- My stylesheet lives in its own /css folder like the assignment asked -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <!-- Matching the mockup exactly: on mobile the nav is always fully expanded
+       (no hamburger button), and on desktop the search box moves up onto the
+       same row as the nav links instead of sitting on its own row. -->
+  <header class="site-header">
+    <div class="header-top">
+      <a href="#home" class="logo">
+        <img src="images/logo.png" alt="Three Star Media logo">
+      </a>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#home" class="current">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <form class="search-form" role="search">
+      <label for="site-search" class="visually-hidden">Search</label>
+      <input type="search" id="site-search" name="q" placeholder="Search">
+      <button type="submit" aria-label="Search">&#128269;</button>
+    </form>
+  </header>
+
+  <!-- ===================== HERO BANNER ===================== -->
+  <section id="home" class="hero">
+    <img src="images/main-banner.jpg" alt="Three Star Media office space" class="hero-image">
+    <div class="hero-text">
+      <h1>Welcome to Three Star Media</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam rerum voluptas nesciunt quam nostrum similique nihil laboriosam provident neque, recusandae voluptate temporibus! Animi accusamus id fuga voluptatibus facilis iusto consequuntur!</p>
+      <a href="#contact" class="btn btn-gold">Connect with us &#9656;</a>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT US ===================== -->
+  <!-- This section uses Flexbox to sit the photo next to the text on desktop -->
+  <section id="about" class="about">
+    <div class="container about-flex">
+      <img src="images/about-us.jpg" alt="Office lounge with a ping pong table" class="about-image">
+      <div class="about-text about-text-padding">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero unde repellendus exercitationem asperiores ducimus placeat, maxime soluta nesciunt quam aliquam consequuntur sequi saepe sint praesentium laboriosam perferendis eius amet ad?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, velit ipsam? Atque accusamus, excepturi sunt reiciendis soluta quo commodi quidem, in perferendis vel sed facilis rerum cum in exercitationem?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <!-- This section uses CSS Grid so the six service cards can rearrange automatically -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Our Services</h2>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <img src="images/digital.jpg" alt="Person working on a laptop and phone in a cafe">
+          <div class="service-card-body">
+            <h3>Digital Transformation</h3>
+            <p>Lorem ipsum dolor sit amet. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur in reprehenderit magnam at vitae corporis quaerat explicabo nisi?</p>
+            <a href="#" class="btn btn-dark">Digital Plans &#9656;</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="images/marketing.jpg" alt="Laptop showing a marketing analytics dashboard">
+          <div class="service-card-body">
+            <h3>Marketing</h3>
+            <p>Lorem ipsum dolor sit amet. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur in reprehenderit magnam at vitae corporis quaerat explicabo nisi?</p>
+            <a href="#" class="btn btn-dark">Marketing Plans &#9656;</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="images/video.jpg" alt="Hand holding a phone playing a video">
+          <div class="service-card-body">
+            <h3>Video Production</h3>
+            <p>Lorem ipsum dolor sit amet. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur in reprehenderit magnam at vitae corporis quaerat explicabo nisi?</p>
+            <a href="#" class="btn btn-dark">Video Plans &#9656;</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="images/web.jpg" alt="Phone showing a login screen next to a notebook">
+          <div class="service-card-body">
+            <h3>Web Development</h3>
+            <p>Lorem ipsum dolor sit amet. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur in reprehenderit magnam at vitae corporis quaerat explicabo nisi?</p>
+            <a href="#" class="btn btn-dark">Web Plans &#9656;</a>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <img src="images/print.jpg" alt="Row of newspaper print stands on a street">
+          <div class="service-card-body">
+            <h3>Print</h3>
+            <p>Lorem ipsum dolor sit amet. Eius vel, rem inventore quo tempora animi mollitia eaque error qui consectetur in reprehenderit magnam at vitae corporis quaerat explicabo nisi?</p>
+            <a href="#" class="btn btn-dark">Print Plans &#9656;</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== VISION ===================== -->
+  <section class="vision">
+    <img src="images/vision.jpg" alt="Blue paper boats folded on a dark surface" class="vision-bg">
+    <div class="vision-text">
+      <h2>Our Vision</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptatem delectus iure, sit, accusantium earum est commodi vel iam tempora hic officiis fugiat eaque. Veritatis exercitationem delectus ex ab laudantium.</p>
+      <a href="#" class="btn btn-dark">Learn More &#9656;</a>
+    </div>
+  </section>
+
+  <!-- ===================== TEAM ===================== -->
+  <!-- Also uses Grid so the two photos and two bios line up in a 2x2 block on desktop -->
+  <section id="team" class="team">
+    <div class="container">
+      <h2>Our Team</h2>
+
+      <div class="team-grid">
+        <img src="images/john.jpg" alt="John Doe" class="team-photo">
+        <div class="team-bio">
+          <h3>John Doe</h3>
+          <p class="role">CEO and Co-owner</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, aspernatur ratione sed cum ad officiis sint cumque fugiat similique. Earum laudantium delenitipossimus? Volupatem architecto perferendis harum sit voluptatum tempora.</p>
+        </div>
+
+        <div class="team-bio">
+          <h3>Bob Rite</h3>
+          <p class="role">CFO and Co-owner</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, aspernatur ratione sed cum ad officiis sint cumque fugiat similique. Earum laudantium delenitipossimus? Volupatem architecto perferendis harum sit voluptatum tempora.</p>
+        </div>
+        <img src="images/bob.jpg" alt="Bob Rite" class="team-photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="contact">
+    <div class="container contact-flex">
+
+      <div class="contact-form-wrap">
+        <h2>Contact Us</h2>
+        <h3>Send us a message</h3>
+
+        <!-- Real form fields with labels so it is properly accessible, not just styled boxes -->
+        <form class="contact-form" action="#" method="post">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn btn-dark">Send</button>
+        </form>
+      </div>
+
+      <div class="contact-location-wrap">
+        <h3>Location</h3>
+        <!-- Real embedded Google Map, per the assignment requirement -->
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps?q=Algonquin+College,+1385+Woodroffe+Ave,+Nepean,+ON&output=embed"
+            width="100%" height="300" style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Map showing Algonquin College location">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hours table -->
+    <div class="container">
+      <h3>Hours of operation</h3>
+      <table class="hours-table">
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday - Friday</td>
+            <td>9 AM - 6 PM</td>
+          </tr>
+          <tr>
+            <td>Saturday - Sunday</td>
+            <td>Closed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <p>&copy; Copyright Three Star Media, 2026</p>
+    <p>All images are taken from Unsplash</p>
+  </footer>
+
+</body>
+</html>
