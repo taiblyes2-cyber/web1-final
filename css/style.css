@@ -1,70 +1,40 @@
-/* ================================================================
-   Three Star Media - Final Project
-
-   I built the layout mobile-first and then used the required
-   760px media query to adjust the design for larger screens.
-   ================================================================ */
-
-
-/* Project colours used throughout the site. */
 :root {
   --gold: #c78c06;
   --cream: #ffe6ac;
   --dark: #222222;
   --white: #ffffff;
 }
-
-
-/* Basic reset so browser default spacing does not affect the layout. */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-/* Smooth scrolling when using the navigation links. */
 html {
   scroll-behavior: smooth;
 }
-
-
-/* Main page styles and required Open Sans font. */
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   color: var(--dark);
   line-height: 1.45;
   background: var(--white);
 }
-
-
-/* Keep images inside their containers. */
 img {
   display: block;
   max-width: 100%;
 }
-
-
 ul {
   list-style: none;
 }
-
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
-
-/* Use the same font for all form controls. */
 button,
 input,
 textarea {
   font: inherit;
 }
-
-
-/* Hide the search label visually while keeping it accessible. */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -76,42 +46,28 @@ textarea {
   white-space: nowrap;
   border: 0;
 }
-
-
-/* Shared container. The project requires a maximum width of 1200px. */
 .container {
   width: min(1200px, 100%);
   margin-inline: auto;
   padding-inline: 14px;
 }
-
-
-/* Common heading styles. */
 h1,
 h2,
 h3 {
   font-weight: 800;
   line-height: 1.08;
 }
-
-
 h2 {
   font-size: 2.45rem;
 }
-
-
 h3 {
   font-size: 1.65rem;
 }
 
-
-/* Reusable spacing for the main sections. */
 .section-pad {
   padding: 34px 0;
 }
 
-
-/* Shared button styling. Flexbox keeps the text and arrow aligned. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -143,22 +99,15 @@ h3 {
 
 
 
-/* ================================================================
-   Header and navigation
-   ================================================================ */
+/* Header and navigation */
 
 .site-header {
   background: var(--dark);
 }
 
-
-/* Header is stacked vertically in the mobile layout. */
 .header-inner {
   padding-inline: 0;
 }
-
-
-/* Gold logo area used in the mobile mockup. */
 .logo {
   display: flex;
   align-items: center;
@@ -166,22 +115,15 @@ h3 {
   padding: 14px 18px;
   background: var(--gold);
 }
-
-
 .logo img {
   width: 80px;
   height: 80px;
   object-fit: contain;
 }
-
-
-/* Navigation links stack vertically on smaller screens. */
 .main-nav ul {
   display: flex;
   flex-direction: column;
 }
-
-
 .main-nav a {
   display: flex;
   justify-content: center;
@@ -191,23 +133,15 @@ h3 {
   color: var(--gold);
   font-weight: 400;
 }
-
-
-/* Highlight the Home link like the supplied mockup. */
 .main-nav a.current {
   background: var(--gold);
   color: var(--dark);
 }
-
-
-/* Flexbox keeps the search input and button on the same line. */
 .search-form {
   display: flex;
   padding: 14px;
   background: var(--dark);
 }
-
-
 .search-form input {
   width: 100%;
   min-width: 0;
@@ -218,8 +152,6 @@ h3 {
   background: var(--white);
   color: var(--dark);
 }
-
-
 .search-form button {
   position: relative;
   flex: 0 0 48px;
@@ -229,9 +161,6 @@ h3 {
   background: var(--dark);
   cursor: pointer;
 }
-
-
-/* Magnifying glass made with CSS so another image file is not needed. */
 .search-icon {
   position: absolute;
   width: 17px;
@@ -241,9 +170,6 @@ h3 {
   left: 13px;
   top: 11px;
 }
-
-
-/* This creates the handle of the magnifying glass. */
 .search-icon::after {
   content: '';
   position: absolute;
@@ -258,19 +184,14 @@ h3 {
 
 
 
-/* ================================================================
-   Hero section
-   ================================================================ */
+/* Hero section */
 
-/* Relative positioning lets the overlay sit on top of the banner. */
 .hero {
   position: relative;
   min-height: 440px;
   overflow: hidden;
 }
 
-
-/* Cover fills the banner area without stretching the image. */
 .hero-image {
   width: 100%;
   height: 440px;
@@ -278,16 +199,11 @@ h3 {
   object-position: center;
 }
 
-
-/* Dark overlay makes the white text easier to read. */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.48);
 }
-
-
-/* Flexbox keeps the hero content vertically centered. */
 .hero-content {
   height: 100%;
   display: flex;
@@ -316,33 +232,24 @@ h3 {
   line-height: 1.55;
 }
 
-
-/* Keep the button compact instead of stretching across the hero. */
 .hero .btn {
   align-self: flex-start;
 }
 
 
 
-/* ================================================================
-   About section
-   ================================================================ */
+/* About section */
 
 .about {
   background: var(--cream);
   padding: 14px 0 24px;
 }
 
-
-/* Starts as one column on mobile and becomes two columns on desktop. */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
   padding-inline: 0;
 }
-
-
-/* Keep the image proportion close to the supplied mockup. */
 .about-image {
   width: 100%;
   aspect-ratio: 2 / 1;
@@ -368,54 +275,36 @@ h3 {
 
 
 
-/* ================================================================
-   Services section
-   ================================================================ */
+/* Services */
 
 .services h2 {
   margin-bottom: 24px;
 }
-
-
-/* Service cards stack in one column for the mobile layout. */
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
 }
-
-
 .service-card {
   background: var(--cream);
   overflow: hidden;
 }
-
-
-/* Same image ratio keeps all the cards consistent. */
 .service-card img {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
 }
-
-
 .service-card-body {
   padding: 18px;
 }
-
-
 .service-card h3 {
   margin-bottom: 12px;
 }
-
 
 .service-card p {
   margin-bottom: 16px;
   line-height: 1.55;
 }
-
-
-/* Buttons stay compact on the mobile cards. */
 .service-card .btn-dark {
   width: auto;
   min-height: 58px;
@@ -424,11 +313,8 @@ h3 {
 
 
 
-/* ================================================================
-   Vision section
-   ================================================================ */
+/* Vision */
 
-/* Image section with the content positioned over it. */
 .vision {
   position: relative;
   height: 290px;
@@ -442,16 +328,12 @@ h3 {
   object-fit: cover;
 }
 
-
-/* Blue overlay matches the darker appearance in the mockup. */
 .vision-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 25, 67, 0.52);
 }
 
-
-/* Flexbox vertically centers the vision content. */
 .vision-content {
   height: 100%;
   display: flex;
@@ -473,8 +355,6 @@ h3 {
   line-height: 1.55;
 }
 
-
-/* Learn More stays left aligned instead of becoming full width. */
 .vision-button {
   align-self: flex-start;
   min-height: 64px;
@@ -482,45 +362,33 @@ h3 {
 
 
 
-/* ================================================================
-   Team section
-   ================================================================ */
+/* Team */
 
 .team h2 {
   margin-bottom: 24px;
 }
-
-
-/* Team starts as a single-column grid on mobile. */
 .team-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
 }
 
-
-/* object-fit prevents the team photos from being stretched. */
 .team-photo {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 
-
-/* Cream background visually connects each bio with its image. */
 .team-bio {
   background: var(--cream);
   padding: 18px;
 }
-
 
 .team-bio h3 {
   font-size: 1.8rem;
   margin-bottom: 2px;
 }
 
-
-/* Divider under each job title matches the mockup. */
 .team-bio .role {
   padding-bottom: 9px;
   margin-bottom: 12px;
@@ -536,9 +404,7 @@ h3 {
 
 
 
-/* ================================================================
-   Contact section
-   ================================================================ */
+/* Contact section */
 
 .contact {
   padding-bottom: 28px;
@@ -549,22 +415,17 @@ h3 {
   margin-bottom: 28px;
 }
 
-
-/* Form and business information stack vertically on mobile. */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 28px;
 }
 
-
 .contact h3 {
   margin-bottom: 14px;
   font-size: 1.6rem;
 }
 
-
-/* Flexbox puts every form field on its own line. */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -590,15 +451,11 @@ h3 {
   height: 40px;
 }
 
-
-/* Message box can still be resized vertically by the user. */
 .contact-form textarea {
   min-height: 145px;
   resize: vertical;
 }
 
-
-/* Keep the Send button small like the mockup. */
 .send-button {
   align-self: flex-start;
   margin-top: 13px;
@@ -616,14 +473,11 @@ h3 {
   margin-bottom: 20px;
 }
 
-
-/* Collapse the borders so the hours table looks like one clean grid. */
 .hours-table {
   width: 100%;
   border-collapse: collapse;
   font-size: .94rem;
 }
-
 
 .hours-table th,
 .hours-table td {
@@ -648,16 +502,12 @@ h3 {
   margin-top: 0;
 }
 
-
-/* Wrapper controls the visible size of the embedded Google Map. */
 .map-embed {
   width: 100%;
   height: 300px;
   overflow: hidden;
 }
 
-
-/* Map fills the complete wrapper. */
 .map-embed iframe {
   display: block;
   width: 100%;
@@ -667,9 +517,7 @@ h3 {
 
 
 
-/* ================================================================
-   Footer
-   ================================================================ */
+/* Footer */
 
 .site-footer {
   background: var(--dark);
@@ -693,15 +541,6 @@ h3 {
   margin-bottom: 0;
 }
 
-
-
-/* ================================================================
-   Desktop / tablet layout - 760px and wider
-
-   Everything above is the mobile-first layout. These rules only
-   change the parts that need to look different on larger screens.
-   ================================================================ */
-
 @media (min-width: 760px) {
 
   .container {
@@ -718,9 +557,6 @@ h3 {
     font-size: 2.7rem;
   }
 
-
-
-  /* Desktop header uses three areas: logo, navigation and search. */
   .header-inner {
     min-height: 132px;
     display: grid;
@@ -730,8 +566,6 @@ h3 {
     padding-inline: 20px;
   }
 
-
-  /* The logo image already has the gold background on desktop. */
   .logo {
     width: 82px;
     height: 82px;
@@ -739,14 +573,11 @@ h3 {
     background: transparent;
   }
 
-
   .logo img {
     width: 82px;
     height: 82px;
   }
 
-
-  /* Change the navigation from vertical to horizontal. */
   .main-nav ul {
     flex-direction: row;
     align-items: center;
@@ -760,14 +591,11 @@ h3 {
     font-size: 1rem;
   }
 
-
-  /* Compact search field used at the right side of the desktop header. */
   .search-form {
     width: 245px;
     padding: 0;
     background: transparent;
   }
-
 
   .search-form input,
   .search-form button {
@@ -786,9 +614,6 @@ h3 {
     top: 9px;
   }
 
-
-
-  /* Larger hero area for desktop. */
   .hero,
   .hero-image {
     height: 520px;
@@ -821,9 +646,6 @@ h3 {
     min-width: 250px;
   }
 
-
-
-  /* About section changes into two equal columns. */
   .about {
     padding: 16px 0;
   }
@@ -861,15 +683,6 @@ h3 {
     margin-bottom: 14px;
   }
 
-
-
-  /* ------------------------------------------------------------
-     Services desktop grid
-
-     Six columns make it easy to create two cards in the first
-     row and three equal cards in the second row.
-     ------------------------------------------------------------ */
-
   .services h2 {
     margin-bottom: 25px;
   }
@@ -880,14 +693,10 @@ h3 {
     gap: 16px;
   }
 
-
-  /* First two cards each use half of the row. */
   .featured-service {
     grid-column: span 3;
   }
 
-
-  /* Last three cards each use one third of the row. */
   .compact-service {
     grid-column: span 2;
   }
@@ -913,16 +722,12 @@ h3 {
     line-height: 1.45;
   }
 
-
-  /* Service buttons fill their cards on desktop. */
   .service-card .btn-dark {
     width: 100%;
     min-height: 70px;
   }
 
 
-
-  /* Desktop vision section. */
   .vision {
     height: 265px;
   }
@@ -945,9 +750,6 @@ h3 {
     min-width: 190px;
   }
 
-
-
-  /* Team becomes a two-column layout like the desktop mockup. */
   .team h2 {
     margin-bottom: 25px;
   }
@@ -984,9 +786,6 @@ h3 {
     line-height: 1.45;
   }
 
-
-
-  /* Form sits beside the hours and location on desktop. */
   .contact h2 {
     margin-bottom: 28px;
   }
@@ -997,7 +796,6 @@ h3 {
     gap: 34px;
     align-items: start;
   }
-
 
   .contact h3 {
     font-size: 1.65rem;
@@ -1024,14 +822,6 @@ h3 {
   }
 
 }
-
-
-
-/* ================================================================
-   Wider desktop adjustment
-
-   A little extra spacing is added once there is enough room.
-   ================================================================ */
 
 @media (min-width: 1000px) {
 
